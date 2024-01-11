@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:theme="@style/Theme.Android1.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/Theme.Android1.PopupOverlay"
+                android:layout_height="?attr/actionBarSize"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="@dimen/fab_margin"
+            android:layout_marginBottom="16dp"
+            app:srcCompat="@android:drawable/ic_dialog_email"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/constraintLayout" app:layout_anchorGravity="center"
+            app:layout_anchor="@+id/constraintLayout">
+
+        <TextView
+                android:text="@string/titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView" tools:ignore="MissingConstraints"
+                android:textColor="#092877"
+                android:textSize="34sp"
+
+
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.482"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="100dp"/>
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:ems="10"
+                android:id="@+id/inputValor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/textView"
+                android:layout_marginTop="100dp"/>
+        <RadioGroup
+                android:layout_width="143dp"
+                android:layout_height="131dp"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/grupodeescolha" app:layout_constraintTop_toBottomOf="@+id/ExibirResultado"
+                android:layout_marginTop="30dp">
+            <RadioButton
+                    android:text="EUR"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdEur"/>
+            <RadioButton
+                    android:text="DOLAR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/rdDolar"/>
+            <RadioButton
+                    android:text="LBR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" android:id="@+id/rdLibra"/>
+
+
+        </RadioGroup>
+        <Button
+                android:text="Converter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/BotaoConverter"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/grupodeescolha"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/ExibirResultado"
+                android:visibility="gone" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/inputValor"
+        />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

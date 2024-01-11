@@ -1,17 +1,13 @@
-package com.senai.Volksways;
-
+package com.senai.Volksways.services;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import org.springframework.web.bind.annotation.GetMapping;
 
-public class Servletinitializer extends SpringBootServletInitializer {
-
+public class Servlentlnitializer  extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(VolkswaysApplication.class);
-
+        return application.sources(VokswaysApplication.class);
     }
 
 }
